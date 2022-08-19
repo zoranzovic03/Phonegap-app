@@ -24,8 +24,8 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-color:#FFFFFF;
+   /* background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-gradient(
@@ -34,7 +34,7 @@ body {
         left bottom,
         color-stop(0, #A7A7A7),
         color-stop(0.51, #E4E4E4)
-    );
+    );*/
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
@@ -47,7 +47,6 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:50%;
@@ -97,6 +96,13 @@ h1 {
     display:none;
 }
 
+.content_div {
+    display: none;
+}
+.content_div:first-child {
+    display: block;
+}
+
 @keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
@@ -113,3 +119,167 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+#numUsersContainer {
+    display:none;
+}
+
+#locationToggleContainer .ui-checkbox {
+clear:none;
+}
+
+#locationToggleContainer label {
+float:left;
+padding:18px 10px 0px 0px;
+}
+
+.ui-checkbox #locationToggle {
+    width:30px;
+    height:30px;
+    margin-top:1px;
+    top:5;
+    left:0;
+    float:left;
+    position:relative;
+}
+
+#logo{
+	max-height:40%;
+}
+#logos p{
+		margin:0;
+		font-size:0.8em;
+	    text-transform:none;
+		text-align:left;
+	
+}
+#logos img{
+	max-width:70%;
+	margin-top: 5% ;
+}
+
+#legal p{
+		font-size:0.7em;
+	    text-transform:none;
+		text-align:left;
+}
+
+#legal h1{
+		font-size:0.8em;
+	    text-transform:none;
+		text-align:left;
+}
+
+#app #statusPage, #app #privacyPage {
+text-align:center;
+}
+
+#app, .ui-page {
+background:#fff !important;
+}
+
+#app {
+font-size:20px;
+}
+
+#userPasscodeContainer, #numUsersContainer {
+margin-bottom:60px;
+}
+
+#settingsPage #enterPasswordInstruction { 
+display:none;
+}
+
+/* App Icons */
+#navbar .ui-icon {
+width: 30px!important;
+height: 30px!important;
+margin-left: -15px !important;
+box-shadow: none!important;
+-moz-box-shadow: none!important;
+-webkit-box-shadow: none!important;
+-webkit-border-radius: 0 !important;
+border-radius: 0 !important;
+background-size: 30px 30px;
+}
+
+#navbar .ui-icon-nb-status {
+background: url("../img/icon/status.png") 50% 50% no-repeat;
+}
+
+#navbar .ui-icon-nb-settings {
+background: url("../img/icon/settings.png") 50% 50% no-repeat;
+}
+
+#navbar .ui-icon-nb-privacy {
+background: url("../img/icon/privacy.png") 50% 50% no-repeat;
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    #navbar .ui-icon-nb-status {
+    background: url("../img/iconL/status.png") 50% 50% no-repeat;
+    }
+
+    #navbar .ui-icon-nb-settings {
+    background: url("../img/iconL/settings.png") 50% 50% no-repeat;
+    }
+
+    #navbar .ui-icon-nb-privacy {
+    background: url("../img/iconL/privacy.png") 50% 50% no-repeat;
+    }
+
+    #navbar .ui-icon-nb-status, #navbar .ui-icon-nb-settings, #navbar .ui-icon-nb-privacy {
+		background-size: 30px 30px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #app {
+        font-size:35px;
+    }
+    
+    #navbar .ui-icon-nb-status {
+    background: url("../img/iconL/status.png") 50% 50% no-repeat;
+    }
+
+    #navbar .ui-icon-nb-settings {
+    background: url("../img/iconL/settings.png") 50% 50% no-repeat;
+    }
+
+    #navbar .ui-icon-nb-privacy {
+    background: url("../img/iconL/privacy.png") 50% 50% no-repeat;
+    }
+
+    #navbar .ui-icon-nb-status, #navbar .ui-icon-nb-settings, #navbar .ui-icon-nb-privacy {
+		background-size: 60px 60px;
+    }
+    
+    #navbar .ui-btn {
+        height:100px;
+    }
+    
+    #navbar .ui-icon {
+        width:60px !important;
+        height:60px !important;
+        margin-left:-30px !important;
+    }
+    
+    #navbar .ui-btn-inner {
+        font-size:18px !important;
+        padding-top:70px !important;
+    }
+    
+    #locationToggleContainer .ui-slider {
+        width:120px;
+    }
+}
+
+#navbar .ui-btn-inner {
+padding-top:35px;
+font-size:10px;
+padding-bottom:.2em;
+text-transform:capitalize;
+}
+
